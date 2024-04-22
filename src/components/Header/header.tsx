@@ -1,7 +1,8 @@
 
-
+import { Link } from "react-router-dom";
 
 export const Header = () => {
+
   return (
     <div className="flex flex-col space-y-6 px-8 py-16 ">
       <div className=" space-y-6 px-8">
@@ -23,13 +24,13 @@ export const Header = () => {
         <h2>Escolha qual seção deseja iniciar:</h2>
       </div>
       <div className=" space-y-4 px-8 " >
-        <button
+        <Link to={"/medicos"} 
           className="bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white font-bold w-72 h-[120px] py-3 
         px-8 rounded-xl shadow-lg 
         transform transition-all duration-500 ease-in-out hover:scale-110 hover:brightness-110 hover:animate-pulse active:animate-bounce"
         >
           Médicos(as)
-        </button>
+        </Link>
         <button
           className="bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white font-bold w-72 h-[120px] py-3 
           px-8 rounded-xl shadow-lg 
