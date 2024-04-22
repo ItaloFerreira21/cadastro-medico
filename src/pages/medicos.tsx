@@ -40,7 +40,7 @@ export const Medicos = () => {
           </label>
         </div>
       </div>
-      <div className=" w-80 h-14 mx-4">
+      <div className="input w-80 h-14 mx-4">
         <div className="flex flex-col w-80 h-14 ">
           <label className="text-blue-500 text-xs font-semibold relative top-2 ml-[7px] px-[3px] bg-white w-fit">
             Nome:
