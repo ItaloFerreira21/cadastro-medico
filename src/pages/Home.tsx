@@ -1,10 +1,11 @@
-import { Header } from "../components/Header/header";
+import { Fragment } from "react/jsx-runtime";
+import { HomeIndex } from "../components/Home";
+
 
 export const Home = () => {
   return (
-    <div className=" max-w-[360px] max-h-60">
-      <Header />
-      
-    </div>
+    <Fragment>
+      <HomeIndex />
+    </Fragment>
   );
 };
