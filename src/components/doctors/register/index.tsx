@@ -17,7 +17,9 @@ export const FormRegisterDoctor = () => {
                 valor2="Cardiologia"
                 valor3="Ginecologia"
                 valor4="Dermatologia"
-                placeholder="Especidalidade"
+                valor5="Clinico geral"
+                valor6="Outros"
+                placeholder="Especialidade"
               />
               <InputGeneric label="CRM" placeholder="CRM" />
             </div>
