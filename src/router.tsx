@@ -12,6 +12,7 @@ export function AppRouter() {
         <Route path="/" element={<Home />} />
         <Route path="*" element={<NotFoundPage />} />
         <Route path="/medicos" element={<Doctors />} />
+        
 
       </Routes>
     </BrowserRouter>

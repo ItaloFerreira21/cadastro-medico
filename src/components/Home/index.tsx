@@ -15,16 +15,16 @@ export const HomeIndex = () => {
         >
           Médicos(as)
         </Link>
-        <button
+        <Link to={"/pacientes"}
           className={button}
         >
           Pacientes
-        </button>
-        <button
+        </Link>
+        <Link to={"/consultas"}
           className={button}
         >
           Consultas
-        </button>
+        </Link>
       </div>
     </div>
   )

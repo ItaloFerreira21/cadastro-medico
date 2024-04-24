@@ -9,6 +9,7 @@ import {
   DrawerTrigger,
 } from "@/components/ui/drawer"
 import { Button } from "../ui/button"
+import { RegisterDoctor } from "../doctors/register"
 export const RegisterNewProfileFooter = () => {
   return (
     <footer className="fixed bottom-0  w-full  " >
@@ -25,6 +26,7 @@ export const RegisterNewProfileFooter = () => {
             <DrawerTitle>Cadastro</DrawerTitle>
             <DrawerDescription>This action cannot be undone.</DrawerDescription>
           </DrawerHeader>
+          <RegisterDoctor></RegisterDoctor>
           <DrawerFooter>
             <Button>Submit</Button>
             <DrawerClose>
