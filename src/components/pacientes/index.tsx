@@ -1,11 +1,11 @@
 import { Search } from "lucide-react";
-import { DoctorHeader } from "./header";
+import { PacientesHeader } from "./header";
 import { RegisterNewProfileFooter } from "../generics/FooterNewProfiler";
 
-export const DoctorsPage = () => {
+export const PacientesPage = () => {
   return (
     <div className="w-full">
-      <DoctorHeader />
+      <PacientesHeader />
       <div className="p-4">
         <div className="flex w-full border border-neutral-700 justify-between p-4 rounded-[6px] ">
           <input
