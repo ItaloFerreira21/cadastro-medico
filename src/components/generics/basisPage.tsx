@@ -1,11 +1,15 @@
 import { Search } from "lucide-react";
-import { DoctorHeader } from "./header";
-import { RegisterNewProfileFooter } from "../generics/FooterNewProfiler";
-
-export const DoctorsPage = () => {
+import { HeaderPage } from "./header";
+import { RegisterNewProfile } from "./registerNewProfile";
+import { ReactElement } from "react";
+interface BasisPageProps {
+  headerTitle: string
+  formComponent: ReactElement
+}
+export const BasisPage = ({ headerTitle, formComponent }: BasisPageProps) => {
   return (
     <div className="w-full">
-      <DoctorHeader />
+      <HeaderPage headerTitle={headerTitle} />
       <div className="p-4">
         <div className="flex w-full border border-neutral-700 justify-between p-4 rounded-[6px] ">
           <input
@@ -17,7 +21,7 @@ export const DoctorsPage = () => {
         </div>
       </div>
 
-      <RegisterNewProfileFooter />
+      <RegisterNewProfile formComponent={formComponent} />
     </div>
   );
 };

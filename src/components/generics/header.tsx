@@ -3,7 +3,10 @@ import { Popover, PopoverContent, PopoverTrigger } from "@radix-ui/react-popover
 import { useState } from "react"
 import { Menu, X } from 'lucide-react';
 
-export const PacientesHeader = () => {
+interface headerPageProps {
+  headerTitle: string
+}
+export const HeaderPage = ({ headerTitle }: headerPageProps) => {
   const [openMenu, setOpenMenu] = useState<boolean>(true)
   return (
     <div className="flex items-center justify-between p-4 gap-4 bg-primaryBlue ">
@@ -29,7 +32,7 @@ export const PacientesHeader = () => {
           </svg>
         </Link>
         <h2 className=" text-white text-lg font-medium ">
-          Pacientes
+          {headerTitle}
         </h2>
       </div>
       <Popover >

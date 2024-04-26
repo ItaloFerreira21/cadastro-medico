@@ -1,7 +1,8 @@
-import { DoctorsPage } from "../components/doctors";
+import { FormDoctor } from "@/components/doctors/form";
+import { BasisPage } from "../components/generics/basisPage";
 
 export const Doctors = () => {
   return (
-    <DoctorsPage />
+    <BasisPage headerTitle="Medicos" formComponent={<FormDoctor />} />
   );
 };

@@ -13,6 +13,8 @@ interface inputProps {
   label: string,
   placeholder: string
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void
+  required: boolean
+
 }
 interface InputGenericSelectProps {
   handleSpecialty: (value: string) => void;
@@ -26,7 +28,8 @@ interface InputGenericSelectProps {
 
 
 
-export const InputGeneric = ({ label, value, placeholder, onChange }: inputProps) => {
+export const InputGeneric = ({ label, value, placeholder, onChange, required }: inputProps) => {
+
   return (
     <div className="flex flex-col ">
       <label className="text-[#add8e6 text-sm font-medium relative top-2 ml-[7px] px-[3px] bg-white w-fit">
@@ -37,8 +40,9 @@ export const InputGeneric = ({ label, value, placeholder, onChange }: inputProps
         value={value}
         placeholder={placeholder}
         name="input"
-        className="border-[#add8e6] input px-[10px] py-2 text-base bg-white border rounded-[5px] w-full focus:outline-none placeholder:text-gray-600 placeholder:text-base outline-none"
+        className={`border-[#add8e6] input px-[10px] py-2 text-base bg-white border rounded-[5px] w-full focus:outline-none placeholder:text-gray-600 placeholder:text-base outline-none`}
         onChange={onChange}
+        required={required}
       />
     </div>
   )
@@ -50,7 +54,7 @@ export const InputGenericSelect = ({ handleSpecialty, option1, option2, option3,
   return (
     <Select onValueChange={handleSpecialty}>
       <SelectTrigger
-        className="w-[180px] border-[#add8e6] input px-[10px] py-2 text-base bg-white border rounded-[5px] focus:outline-none placeholder:text-gray-600 placeholder:text-base mt-5"
+        className="w-[180px] border-[#add8e6] input px-[10px] py-2 text-base bg-white border rounded-[5px] focus:outline-none placeholder:text-gray-600 placeholder:text-base mt-5 focus-visible:no-underline  "
 
       >
         <SelectValue placeholder={option1} />
