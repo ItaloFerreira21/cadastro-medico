@@ -3,6 +3,6 @@ import { FormPatient } from "@/components/patients/form";
 
 export const Pacientes = () => {
   return (
-    <BasisPage headerTitle="Pacientes" form={<FormPatient />} />
+    <BasisPage headerTitle="Pacientes" formComponent={<FormPatient />} />
   );
 };

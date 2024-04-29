@@ -20,7 +20,6 @@ export const BasisPage = ({ headerTitle, formComponent }: BasisPageProps) => {
           <Search className="text-gray-600" />
         </div>
       </div>
-
       <RegisterNewProfile formComponent={formComponent} />
     </div>
   );
