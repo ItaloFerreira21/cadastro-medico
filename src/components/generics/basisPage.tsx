@@ -5,8 +5,9 @@ import { ReactElement } from "react";
 interface BasisPageProps {
   headerTitle: string
   formComponent: ReactElement
+  basisContent: ReactElement
 }
-export const BasisPage = ({ headerTitle, formComponent }: BasisPageProps) => {
+export const BasisPage = ({ headerTitle, formComponent, basisContent }: BasisPageProps) => {
   return (
     <div className="w-full">
       <HeaderPage headerTitle={headerTitle} />
@@ -19,6 +20,7 @@ export const BasisPage = ({ headerTitle, formComponent }: BasisPageProps) => {
           />
           <Search className="text-gray-600" />
         </div>
+        {basisContent}
       </div>
       <RegisterNewProfile formComponent={formComponent} />
     </div>
