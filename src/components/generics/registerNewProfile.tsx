@@ -18,9 +18,9 @@ export const RegisterNewProfile = ({ formComponent }: RegisterNewProfileProps) =
       <Drawer>
         <DrawerTrigger className="w-full shadow-top ">
           <div className="p-4 flex justify-center items-center shadow-2xl">
-            <button className="bg-primaryBlue hover:bg-primaryBlue-dark text-white font-bold rounded-[6px] focus:outline-none focus:shadow-outline w-[90%] p-4 items-center flex justify-center transform transition-all duration-500 ease-in-out hover:scale-110 hover:brightness-110 hover:animate-pulse ">
+            <a className="bg-primaryBlue hover:bg-primaryBlue-dark text-white font-bold rounded-[6px] focus:outline-none focus:shadow-outline w-[90%] p-4 items-center flex justify-center transform transition-all duration-500 ease-in-out hover:scale-110 hover:brightness-110 hover:animate-pulse ">
               Cadastrar novo perfil
-            </button>
+            </a>
           </div>
         </DrawerTrigger>
         <DrawerContent className="h-screen rounded-none">

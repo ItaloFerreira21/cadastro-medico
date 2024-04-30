@@ -9,7 +9,7 @@ interface BasisPageProps {
 }
 export const BasisPage = ({ headerTitle, formComponent, basisContent }: BasisPageProps) => {
   return (
-    <div className="w-full">
+    <div className="w-full overflow-w-hidden">
       <HeaderPage headerTitle={headerTitle} />
       <div className="p-4">
         <div className="flex w-full border border-neutral-700 justify-between p-4 rounded-[6px] ">
