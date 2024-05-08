@@ -1,8 +1,10 @@
+import { HeaderPage } from "../generics/header"
+
 
 export const ConsultasInicio = () => {
   return (
-    <div>
-      <h1>teste</h1>
-    </div>
+  <div>
+    <HeaderPage headerTitle={"consultas"} />
+  </div>
   )
 }

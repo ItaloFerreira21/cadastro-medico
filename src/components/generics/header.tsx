@@ -47,8 +47,6 @@ export const HeaderPage = ({ headerTitle }: headerPageProps) => {
           </ul>
         </PopoverContent>
       </Popover>
-
-
     </div>
   )
 }
