@@ -3,6 +3,7 @@ import { Home } from "./pages/Home"
 import { NotFoundPage } from "./pages/NotFound"
 import { Doctors, } from "./pages/Doctors"
 import { Pacientes, } from "./pages/Patients"
+import { Consultas } from "./pages/Consultas"
 
 
 
@@ -17,8 +18,7 @@ export function AppRouter() {
         <Route path="*" element={<NotFoundPage />} />
         <Route path="/medicos" element={<Doctors />} />
         <Route path="/pacientes" element={<Pacientes />} />
-
-
+        <Route path="/consultas" element={<Consultas />} />
       </Routes>
     </BrowserRouter>
 
