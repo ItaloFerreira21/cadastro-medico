@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export const ConsultasBasisContent = () => {
-  const [isOpen, setIsOpen] = useState<boolean>(false)
+  const [isOpen, setIsOpen] = useState<boolean>(false);
   return (
     <div className="w-[360px] h-[792px] flex flex-col ">
       <div className="w-40 h-6 pt-6 flex ">
@@ -39,13 +39,13 @@ export const ConsultasBasisContent = () => {
           <div className="w-full rounded-lg border-2 border-indigo-500 bg-transparent p-4 text-center shadow-lg dark:bg-gray-800">
             <div className="flex justify-end ">
               <button
-              onClick={() => setIsOpen(!isOpen)}
-              aria-label={isOpen ? 'Close' : 'Open'}
+                onClick={() => setIsOpen(!isOpen)}
+                aria-label={isOpen ? "Close" : "Open"}
                 data-dismiss-target="#toast-notification"
                 className="ms-auto -mx-1.5 -my-1.5 bg-white justify-center items-center flex-shrink-0 text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex h-8 w-8 dark:text-gray-500 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700"
                 type="button"
               >
-                <span className="sr-only">{isOpen ? 'Close' : 'Open'}</span>
+                <span className="sr-only">{isOpen ? "Close" : "Open"}</span>
                 <svg
                   viewBox="0 0 14 14"
                   fill="none"
@@ -62,36 +62,37 @@ export const ConsultasBasisContent = () => {
                   ></path>
                 </svg>
               </button>
-             
             </div>
             {isOpen && (
-                <>
-            <h3 className=" pt-2 font-bold text-blue-800 ">9:00</h3>
+              <>
+                <h3 className=" pt-2 font-bold text-blue-800 ">9:00</h3>
 
-            <h4 className="pt-2 font-normal text-blue-600">
-              Nome do medico
-              <p className="font-light text-gray-500">especialidade | CRM </p>
-            </h4>
-            <h4 className="pt-2 font-normal text-blue-600">
-              Nome do paciente
-              <p className="font-light text-gray-500 pb-2">Paciente</p>
-            </h4>
+                <h4 className="pt-2 font-normal text-blue-600">
+                  Nome do medico
+                  <p className="font-light text-gray-500">
+                    especialidade | CRM{" "}
+                  </p>
+                </h4>
+                <h4 className="pt-2 font-normal text-blue-600">
+                  Nome do paciente
+                  <p className="font-light text-gray-500 pb-2">Paciente</p>
+                </h4>
 
-            <div className="flex items-center justify-center">
-              <a
-                href="#"
-                className="rounded-full bg-indigo-600 px-4 py-2 text-white hover:bg-indigo-700 dark:bg-indigo-400 dark:hover:bg-indigo-500"
-              >
-                Editar
-              </a>
-              <a
-                href="#"
-                className="ml-4 rounded-full bg-gray-300 px-4 py-2 hover:bg-gray-400 dark:bg-gray-700 dark:hover:bg-gray-600"
-              >
-                Excluir
-              </a>
-            </div>
-            </>
+                <div className="flex items-center justify-center">
+                  <a
+                    href="#"
+                    className="rounded-full bg-indigo-600 px-4 py-2 text-white hover:bg-indigo-700 dark:bg-indigo-400 dark:hover:bg-indigo-500"
+                  >
+                    Editar
+                  </a>
+                  <a
+                    href="#"
+                    className="ml-4 rounded-full bg-gray-300 px-4 py-2 hover:bg-gray-400 dark:bg-gray-700 dark:hover:bg-gray-600"
+                  >
+                    Excluir
+                  </a>
+                </div>
+              </>
             )}
           </div>
         </div>
