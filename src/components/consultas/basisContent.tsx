@@ -4,9 +4,12 @@ export const ConsultasBasisContent = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   return (
     <div className="w-[360px] h-[792px] flex flex-col ">
-      <div className="w-40 h-6 pt-6 flex ">
-        <h3>Hoje (data)</h3>
-        <div className="py-[4.5px] pl-2">
+      
+
+      <div className="w-auto h-[232px]  ">
+      <div className="w-40 h-6 ml-2 pt-6 flex ">
+        <h3 className="pt-2">Hoje (data)</h3>
+        <div className="py-3 pl-2">
           <svg
             width="34"
             height="17"
@@ -33,10 +36,8 @@ export const ConsultasBasisContent = () => {
           </svg>
         </div>
       </div>
-
-      <div className="w-auto h-[232px] pt-8  ">
         <div className="flex items-center justify-center  ">
-          <div className="w-full rounded-lg border-2 border-indigo-500 bg-transparent p-4 text-center shadow-lg dark:bg-gray-800">
+          <div className="w-full rounded-lg  border-indigo-500 bg-transparent p-4 text-center shadow-lg dark:bg-gray-800">
             <div className="flex justify-end ">
               <button
                 onClick={() => setIsOpen(!isOpen)}
