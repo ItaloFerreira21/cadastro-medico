@@ -8,6 +8,7 @@ export const Doctors = () => {
       basisContent={<DoctorsBasisContent />}
       headerTitle="Medicos"
       formComponent={<FormDoctor />}
+      textButton="Cadastrar novo Médico"
     />
   );
 };

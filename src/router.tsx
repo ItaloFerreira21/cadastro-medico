@@ -3,12 +3,7 @@ import { Home } from "./pages/Home"
 import { NotFoundPage } from "./pages/NotFound"
 import { Doctors, } from "./pages/Doctors"
 import { Pacientes, } from "./pages/Patients"
-import { Consultas } from "./pages/Consultas"
-
-
-
-
-
+import { Consultas } from "./pages/Consultation"
 
 export function AppRouter() {
   return (

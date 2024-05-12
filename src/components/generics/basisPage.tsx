@@ -6,8 +6,9 @@ interface BasisPageProps {
   headerTitle: string
   formComponent: ReactElement
   basisContent: ReactElement
+  textButton: string
 }
-export const BasisPage = ({ headerTitle, formComponent, basisContent }: BasisPageProps) => {
+export const BasisPage = ({ headerTitle, formComponent, basisContent, textButton }: BasisPageProps) => {
   return (
     <div className="w-full overflow-w-hidden">
       <HeaderPage headerTitle={headerTitle} />
@@ -22,7 +23,7 @@ export const BasisPage = ({ headerTitle, formComponent, basisContent }: BasisPag
         </div>
         {basisContent}
       </div>
-      <RegisterNewProfile formComponent={formComponent} />
+      <RegisterNewProfile formComponent={formComponent} textButton={textButton} />
     </div>
   );
 };
