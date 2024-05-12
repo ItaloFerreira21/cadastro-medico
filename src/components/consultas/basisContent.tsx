@@ -1,11 +1,24 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+
 
 export const ConsultasBasisContent = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  return (
-    <div className="w-[360px] h-[792px] flex flex-col ">
-      
+  const cardRef = useRef<HTMLDivElement>(null)
 
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (cardRef.current && event.target instanceof Node && !cardRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside)
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside)
+    }
+  },[cardRef])
+
+  return (
+    <div onClick={() => setIsOpen(!isOpen)} className="w-[360px] h-[792px] flex flex-col ">
       <div className="w-auto h-[232px]  ">
       <div className="w-40 h-6 ml-2 pt-6 flex ">
         <h3 className="pt-2">Hoje (data)</h3>
@@ -36,11 +49,14 @@ export const ConsultasBasisContent = () => {
           </svg>
         </div>
       </div>
-        <div className="flex items-center justify-center  ">
-          <div className="w-full rounded-lg  border-indigo-500 bg-transparent p-4 text-center shadow-lg dark:bg-gray-800">
-            <div className="flex justify-end ">
+      <div className="flex items-center justify-center">
+          <div
+            ref={cardRef}
+            className="w-full rounded-lg border-indigo-500 bg-transparent p-4 text-center shadow-lg dark:bg-gray-800"
+          >
+            <div className="flex justify-end">
               <button
-                onClick={() => setIsOpen(!isOpen)}
+                //onClick={() => setIsOpen(!isOpen)}
                 aria-label={isOpen ? "Close" : "Open"}
                 data-dismiss-target="#toast-notification"
                 className="ms-auto -mx-1.5 -my-1.5 bg-white justify-center items-center flex-shrink-0 text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex h-8 w-8 dark:text-gray-500 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700"
